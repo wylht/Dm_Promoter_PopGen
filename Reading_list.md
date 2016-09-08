@@ -12,3 +12,7 @@
 ### Background on CAGE (Cap Analysis of Gene Expression)
 
 1. Takahashi et al., 2012. CAGE (cap analysis of gene expression): a protocol for the detection of promoter and transcriptional networks. Link: http://www.ncbi.nlm.nih.gov/pubmed/21938627
+
+### Population genomic resource
+
+1. Lack et al., 2015. The Drosophila Genome Nexus: A Population Genomic Resource of 623 Drosophila melanogaster Genomes, Including 197 from a Single Ancestral Range Population. Link: http://www.genetics.org/content/early/2015/01/27/genetics.115.174664
