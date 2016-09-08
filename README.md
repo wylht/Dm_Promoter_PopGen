@@ -1,2 +1,6 @@
 ### INFO-I 529 Project ###
-Advised by R. Taylor Raborn
+List of group members:
+Krishna Bathina
+Guillaume Dury
+Xuan Wang
+R. Taylor Raborn (co-advisor)
