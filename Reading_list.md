@@ -9,7 +9,7 @@
 
 4. Lenhard et al., 2012. Metazoan promoters: emerging characteristics and insights into transcriptional regulation. Link: http://www.nature.com/nrg/journal/v13/n4/full/nrg3163.html (Note: this is an important review paper.)
 
-5. Raborn et al., 2016. Promoter Architecture and Sex-Specific Gene Expression in Daphnia pulex. http://www.genetics.org/content/early/2016/08/29/genetics.116.193334. (Our recent paper, which looks at peaked and broad promoters in Daphnia.
+5. Raborn et al., 2016. Promoter Architecture and Sex-Specific Gene Expression in Daphnia pulex. http://www.genetics.org/content/early/2016/08/29/genetics.116.193334. (Hote: this is our recent paper, which looks at peaked and broad promoters in Daphnia.)
 
 ### Background on CAGE (Cap Analysis of Gene Expression)
 
