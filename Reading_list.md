@@ -21,4 +21,7 @@
 
 ### Selection on cis-regulatory regions
 
-1. Ward and Kellis, 2012. Evidence of abundant purifying selection in humans for recently-acquired regulatory functions. http://www.ncbi.nlm.nih.gov/pmc/articles/PMC4104271/. 
+1. Ward and Kellis, 2012. Evidence of abundant purifying selection in humans for recently-acquired regulatory functions. http://www.ncbi.nlm.nih.gov/pmc/articles/PMC4104271/.
+
+### Useful resource on population genetics in R
+1. From NESCENT: http://popgen.nescent.org/StartSNP.html
