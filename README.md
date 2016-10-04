@@ -22,3 +22,7 @@ Misc updates 9-22
 
 1. Krishna added a pi calculator script: py.pi (thanks to Guillaume for adding his code on Monday). Taylor tweaked the code very slightly so it automatically outputs pi given the embedded test data.
 2. Our storage allocation is now available at /N/dc2/projects/PromoterPopGen . Please check to see if you i) can navigate into the directory and ii) encounter any permissions issues creating a test directory/file.
+
+Misc updates 10-3
+1. Meeting proposed for 10-11 at 5:30PM (location TBA).
+2. RTR added a relavant Population Genomics link to reading list.
