@@ -28,3 +28,8 @@ Misc updates 10-4
 1. Meeting scheduled for 10-11 at 5:30PM (location TBA).
 2. RTR added a relevant Population Genomics link to reading list.
 3. RTR wrote and added 'importSeq', an R file that imports fasta data derived from SEQ data.
+
+Misc updates 10-5
+
+1. RTR added seqConvert.sh, which converts all SEQ files to FASTA format; the header is the filename before the .seq prefix.
+2. RTR converted all SEQ files in our `/N/dc2/projects/PromoterPopGen/` folder to FASTA format using seqConvert.sh.
