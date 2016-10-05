@@ -1,8 +1,9 @@
 #!/bin/bash
 
-DIR=CLARK_sequences/CLARK_Chr2
+DIR="data/DmNexus/CLARK_Chr2L"
+HEADER="Chr2L"
 
-cd $DIRL
+cd $DIR
 
 for i in *.seq;
  do
@@ -11,3 +12,9 @@ awk -v c="> $t" '{ print c; print $0; }' $i > $t.fasta
 done
 
 echo "Conversion of SEQ files complete"
+
+cat *.fasta > $HEADER.combined.fasta
+
+echo "Concatentation of fasta files complete."
+
+
