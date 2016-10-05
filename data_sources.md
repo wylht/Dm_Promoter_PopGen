@@ -5,3 +5,8 @@
 
 ### Population Genomic data:
 1. Lack et al., 2015. (Genetics). Drosophila Genome Nexus. [Link:](http://www.johnpool.net/genomes.html)
+
+### Data repository
+
+-As of 9-22, our data is available at the following directory, which is accessible via UITS HPC resources:
+`/N/dc2/projects/PromoterPopGen`
