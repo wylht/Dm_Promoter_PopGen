@@ -33,3 +33,12 @@ Misc updates 10-5
 
 1. RTR added seqConvert.sh, which converts all SEQ files to FASTA format; the header is the filename before the .seq prefix.
 2. RTR converted all SEQ files in our `/N/dc2/projects/PromoterPopGen/` folder to FASTA format using seqConvert.sh.
+
+Misc updated 10-11
+
+1. Our meeting was extremely productive. We discussed our current progress, the data structure (DNAstring object in R) and the things that need to be done.
+2. We agreed to focus on the following two issues: i) how to manipulate the DNAstring object to calculate pi and ii) subsetting the DNAstring object to retrieve only the intervals of interest (i.e. promoters)
+3. RTR added an example of the DNAstring object (as an R binary in .RData format) to our folder on UITS (see /data). Load the file into your R workspace using the following command:
+`R
+load("DNAstrings_example.RData")
+`
