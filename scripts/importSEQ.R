@@ -1,29 +1,19 @@
 #' Imports fasta files from Drosophila Genome Nexus datasets and creates a DNAStringSet object.
-#' @param dirName a directory containing fasta files
+#' @param fileName a fasta file containing multiple SEQ strings
 #' @import biostrings readDNAstringSet
 #' @return an object of class DNAStringSet containing the sequences from the SEQ files
+#' @export
 
-importSEQ <- function(dirName) {
-
+importSEQ <- function(fileName) {
     library("Biostrings")
     
-    my.list <- list.files(dirName, full.names=TRUE, pattern="\\.fasta$")
-    
-    if (length(my.list)<1) {
-        stop("There are no files with the .fasta extension in the folder (dirName) provided.")
+    if (is.character(fileName)==FALSE) {
+        stop("\nfileName must be of class 'character'\n")
     }
-
-    this.list <- vector(mode="list")
-
-    for (i in 1:length(my.list)) {
-
-        my.list[i] -> this.SEQ
     
-        readDNAStringSet(this.SEQ, format="fasta", use.names=TRUE) -> this.list[[i]]
+        readDNAStringSet(fileName, format="fasta", use.names=TRUE) -> this.string
 
-    }
-
-    return(this.list)
+    return(this.string)
         
 }    
     
