@@ -34,7 +34,7 @@ Misc updates 10-5
 1. RTR added seqConvert.sh, which converts all SEQ files to FASTA format; the header is the filename before the .seq prefix.
 2. RTR converted all SEQ files in our `/N/dc2/projects/PromoterPopGen/` folder to FASTA format using seqConvert.sh.
 
-Misc updated 10-11
+Misc updates 10-11
 
 1. Our meeting was extremely productive. We discussed our current progress, the data structure (DNAstring object in R) and the things that need to be done.
 2. We agreed to focus on the following two issues: i) how to manipulate the DNAstring object to calculate pi and ii) subsetting the DNAstring object to retrieve only the intervals of interest (i.e. promoters)
@@ -42,3 +42,15 @@ Misc updated 10-11
 `R
 load("DNAstrings_example.RData")
 `
+
+Misc updates 10-20
+
+1. Guillaume and Taylor met to get through our problem with accessing strings from DNAStringSet objects. We're happy to report that we have solved this; we'll report how below.
+2. RTR modified immportSEQ.R to operate on a single combined (multiple SEQ files concatenated toegher) fasta file at a time.
+3. Character information can be extracted from a DNAStringSet object (please see the sample object in /data)  as follows:
+`R
+load("DNAstring_example.RData")
+as.character(sample_DNAstring[[1]][20000:20100])
+[1] "TGTGGCCGAATTTATTCTAAACTGAAAATAATAATAAAAATTAATCAAATTTTCAATAAGTAAAAAATTAAAAAGGAACTTGTATATTTTTTCACTCTTAT"
+`
+4. Guillaume is now re-implementing the pi caculator in R, and RTR is writing a function to extract sequences from a given interval (e.g. from a BED file).
