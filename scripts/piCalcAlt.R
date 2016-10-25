@@ -25,14 +25,15 @@ for (seq in 1:length(MyString)){
 #This fuction calculates heterozygosity using the vector of valib bases at a position (from PositionExtract)
 hCalc <- function(BasePosition) {
   n = length(BasePosition)
-  BasePosition <- table(BasePosition)
+  if(n == 0){return(NULL)}
+  else{
   afreq <- sum(BasePosition == 'A')
   tfreq <- sum(BasePosition == 'T')
   cfreq <- sum(BasePosition == 'C')
   gfreq <- sum(BasePosition == 'G')
-  h <- (n/(n-1))*(1-(afreq*afreq+cfreq*cfreq+tfreq*tfreq+gfreq*gfreq))
-  if(n == 0){return(NULL)}
-  else{return(h)}
+  h <- (n/(n-1))*(1-((afreq/n)^2+(cfreq/n)^2+(tfreq/n)^2+(gfreq/n)^2))
+  return(h)
+  }
 }
 
 #This loops through the wanted positions and gives a vector of heterozygosity values
@@ -52,6 +53,9 @@ piCalc <- function(hVec){
 
 #Example of how to extract all bases at one position
 PositionExtract(4, ToyData)
+
+#Example of how to extract all bases at one position
+hCalc(PositionExtract(4, ToyData))
 
 #Example usage to get a vector of heterozygosity values
 demo <- hVector(1, 52, ToyData)
