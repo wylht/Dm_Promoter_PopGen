@@ -5,7 +5,7 @@ hVector <- function(MyString, startPos, endPos) {
   message("\nPi calculation in progress for the selected range...\n")
 
   for (i in startPos:endPos) {
-      h <- piCalc(extractPos(MyString, i))
+      h <- hCalc(extractPos(MyString, i))
 #     print(h)
       hVec = c(hVec, h)
   }

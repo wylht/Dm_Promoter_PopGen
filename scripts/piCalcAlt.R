@@ -28,9 +28,13 @@ hCalc <- function(BasePosition) {
   if(n == 0){return(NULL)}
   else{
   afreq <- sum(BasePosition == 'A')
+  print(afreq)
   tfreq <- sum(BasePosition == 'T')
+  print(tfreq)
   cfreq <- sum(BasePosition == 'C')
+  print(cfreq)
   gfreq <- sum(BasePosition == 'G')
+  print(gfreq)
   h <- (n/(n-1))*(1-((afreq/n)^2+(cfreq/n)^2+(tfreq/n)^2+(gfreq/n)^2))
   return(h)
   }
