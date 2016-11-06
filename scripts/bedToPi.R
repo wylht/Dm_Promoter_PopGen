@@ -16,7 +16,7 @@ bedToPi <- function(DNAstringFile, chrName, bedFile, writeTable) {
         c(my.coord, pi.value) -> my.matrix[i,]
     }
     colnames(my.matrix) <- c("coordinates", "pi")
-    my.df <- my.data.frame(my.matrix)
+    my.df <- as.data.frame(my.matrix)
          if (writeTable==TRUE) {
              write.table(my.df, file="piTable.txt", sep="\t", quote=FALSE, col.names=TRUE, row.names=FALSE)
          }
