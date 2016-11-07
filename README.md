@@ -54,3 +54,16 @@ as.character(sample_DNAstring[[1]][20000:20100])
 [1] "TGTGGCCGAATTTATTCTAAACTGAAAATAATAATAAAAATTAATCAAATTTTCAATAAGTAAAAAATTAAAAAGGAACTTGTATATTTTTTCACTCTTAT"
 `
 4. Guillaume is now re-implementing the pi caculator in R, and RTR is writing a function to extract sequences from a given interval (e.g. from a BED file).
+
+Misc updates 11-1
+
+1. Taylor committed updates, which built on Guillaume's commit from last week.
+2. At present, we have a workflow to extract pi for a given set of coordinates from a DNAString object. The function retrievePi() does this by calling other subfunctions.
+3. We had a good meeting (5:30 to 6:25PM) discussing next steps. Our major priority is acessing intervals from a BED file containing promoters.
+4. A sample DNAString object was added to the top level of our shared /N/dc2/projects folder.
+
+Misc updates 11-5/6
+
+1. Taylor wrote bedToPi.R, which is the 'master' script we needed to pull information from BED files and calculate pi across the intervals.
+2. bedToPi.R was run on our promoter dataset with sample data: 'sample_DNAstring' (Chr2L; 10 individuals), and the results are in the newly-created results/ directory, along with the command used to generate the file.
+3. We're getting there! We now need to ramp this up on the entire dataset (85 indv. x all chromosome arms).
