@@ -24,4 +24,3 @@ ggsave(file="TSR_500bp_h_mean_plot_CLARK.png")
 p <- ggplot(h_mean_df, aes(Position,Mean_h))
 p + geom_point(color="blue2")
 ggsave(file="TSR_500bp_h_mean_dotplot_CLARK.png")
-
