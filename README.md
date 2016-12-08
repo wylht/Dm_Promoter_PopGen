@@ -67,3 +67,11 @@ Misc updates 11-5/6
 1. Taylor wrote bedToPi.R, which is the 'master' script we needed to pull information from BED files and calculate pi across the intervals.
 2. bedToPi.R was run on our promoter dataset with sample data: 'sample_DNAstring' (Chr2L; 10 individuals), and the results are in the newly-created results/ directory, along with the command used to generate the file.
 3. We're getting there! We now need to ramp this up on the entire dataset (85 indv. x all chromosome arms).
+
+Updates Dec 8.
+Things to do:
+
+1. Make sure it doesn't vary over population
+2. Make sure each site doesn't differ over various regions
+3. Shape values - Top 10% is peaked, bottom 10% is broad, and middle 80% is unclassified (KB)
+4. Make comparisons with other parts of the genome - How does the mean H value compare between TSR and coding regions?
