@@ -9,7 +9,7 @@ output: html_document
 rm(list=ls())  # Clears all the variables from memory. 
 graphics.off() # Clears all he graphs.
 #Sets the folder to work in
-setwd('C:/Users/Guillaume/Desktop/Indiana U/I590 SNP discovery/local_copies')
+setwd("../../results/TSS_500_h_value_tables")
 ```
 
 ##CLARK data
