@@ -1,0 +1,211 @@
+---
+title: "PromoterProject"
+author: "Guillaume Dury"
+date: "December 8, 2016"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+rm(list=ls())  # Clears all the variables from memory. 
+graphics.off() # Clears all he graphs.
+#Sets the folder to work in
+setwd("../../results/TSS_500_h_value_tables")
+```
+
+##CLARK data
+```{r}
+#library(GenomicRanges)
+library(ggplot2)
+h_summary <- read.csv(file="all_h_CLARK_sequences.csv", header=FALSE)
+dim(h_summary)
+head(h_summary)
+my.col <- c("chr", "start", "end", "strand")
+my.col2 <- -250:250
+final.colnames <- c(my.col, my.col2)
+colnames(h_summary) <- final.colnames
+h_values_table <- h_summary[,5:505]
+head(h_summary)
+head(h_values_table)
+h_mean_vec <- apply(h_values_table, 2, mean)
+h_median_vec <- apply(h_values_table, 2, median)
+h_mean_matrix <- cbind(-250:250, h_mean_vec, h_median_vec)
+colnames(h_mean_matrix) <- c("Position", "Mean_h", "Median_h")
+h_mean_df <- as.data.frame(h_mean_matrix)
+
+p <- ggplot(h_mean_df, aes(Position,Mean_h))
+p + geom_line(color="blue2")
+ggsave(file="TSR_500bp_h_mean_plot_CLARK.png")
+
+p <- ggplot(h_mean_df, aes(Position,Mean_h))
+p + geom_point(color="blue2")
+ggsave(file="TSR_500bp_h_mean_dotplot_CLARK.png")
+#print(file="TSR_500bp_h_mean_dotplot_CLARK.png")
+
+write.table(h_mean_df, file="Pop_h_values.csv", sep="\t", quote=FALSE, col.names=TRUE, row.names=TRUE)
+```
+
+##AGES data
+```{r}
+#library(GenomicRanges)
+library(ggplot2)
+h_summary <- read.csv(file="all_h_AGES_sequences.csv", header=FALSE)
+dim(h_summary)
+head(h_summary)
+my.col <- c("chr", "start", "end", "strand")
+my.col2 <- -250:250
+final.colnames <- c(my.col, my.col2)
+colnames(h_summary) <- final.colnames
+h_values_table <- h_summary[,5:505]
+head(h_summary)
+head(h_values_table)
+h_mean_vec <- apply(h_values_table, 2, mean)
+h_median_vec <- apply(h_values_table, 2, median)
+h_mean_matrix <- cbind(-250:250, h_mean_vec, h_median_vec)
+colnames(h_mean_matrix) <- c("Position", "Mean_h", "Median_h")
+h_mean_df <- as.data.frame(h_mean_matrix)
+
+p <- ggplot(h_mean_df, aes(Position,Mean_h))
+p + geom_line(color="red")
+ggsave(file="TSR_500bp_h_mean_plot_AGES.png")
+
+p <- ggplot(h_mean_df, aes(Position,Mean_h))
+p + geom_point(color="red")
+ggsave(file="TSR_500bp_h_mean_dotplot_AGES.png")
+#print(file="TSR_500bp_h_mean_dotplot_AGES.png")
+
+write.table(h_mean_df, file="Pop_h_values.csv", sep="\t", quote=FALSE, col.names=TRUE, row.names=TRUE)
+```
+
+##NUZHDIN data
+```{r}
+#library(GenomicRanges)
+library(ggplot2)
+h_summary <- read.csv(file="all_h_NUZHDIN_sequences.csv", header=FALSE)
+dim(h_summary)
+head(h_summary)
+my.col <- c("chr", "start", "end", "strand")
+my.col2 <- -250:250
+final.colnames <- c(my.col, my.col2)
+colnames(h_summary) <- final.colnames
+h_values_table <- h_summary[,5:505]
+head(h_summary)
+head(h_values_table)
+h_mean_vec <- apply(h_values_table, 2, mean)
+h_median_vec <- apply(h_values_table, 2, median)
+h_mean_matrix <- cbind(-250:250, h_mean_vec, h_median_vec)
+colnames(h_mean_matrix) <- c("Position", "Mean_h", "Median_h")
+h_mean_df <- as.data.frame(h_mean_matrix)
+
+p <- ggplot(h_mean_df, aes(Position,Mean_h))
+p + geom_line(color="orange")
+ggsave(file="TSR_500bp_h_mean_plot_NUZHDIN.png")
+
+p <- ggplot(h_mean_df, aes(Position,Mean_h))
+p + geom_point(color="orange")
+ggsave(file="TSR_500bp_h_mean_dotplot_NUZHDIN.png")
+#print(file="TSR_500bp_h_mean_dotplot_NUZHDIN.png")
+
+write.table(h_mean_df, file="Pop_h_values.csv", sep="\t", quote=FALSE, col.names=TRUE, row.names=TRUE)
+```
+
+
+##NUZHDIN data
+```{r}
+#library(GenomicRanges)
+library(ggplot2)
+h_summary <- read.csv(file="all_h_NUZHDIN_sequences.csv", header=FALSE)
+dim(h_summary)
+head(h_summary)
+my.col <- c("chr", "start", "end", "strand")
+my.col2 <- -250:250
+final.colnames <- c(my.col, my.col2)
+colnames(h_summary) <- final.colnames
+h_values_table <- h_summary[,5:505]
+head(h_summary)
+head(h_values_table)
+h_mean_vec <- apply(h_values_table, 2, mean)
+h_median_vec <- apply(h_values_table, 2, median)
+h_mean_matrix <- cbind(-250:250, h_mean_vec, h_median_vec)
+colnames(h_mean_matrix) <- c("Position", "Mean_h", "Median_h")
+h_mean_df <- as.data.frame(h_mean_matrix)
+
+p <- ggplot(h_mean_df, aes(Position,Mean_h))
+p + geom_line(color="orange")
+ggsave(file="TSR_500bp_h_mean_plot_NUZHDIN.png")
+
+p <- ggplot(h_mean_df, aes(Position,Mean_h))
+p + geom_point(color="orange")
+ggsave(file="TSR_500bp_h_mean_dotplot_NUZHDIN.png")
+#print(file="TSR_500bp_h_mean_dotplot_NUZHDIN.png")
+
+write.table(h_mean_df, file="Pop_h_values.csv", sep="\t", quote=FALSE, col.names=TRUE, row.names=TRUE)
+```
+
+
+
+##POOL data
+```{r}
+#library(GenomicRanges)
+library(ggplot2)
+h_summary <- read.csv(file="all_h_POOL_sequences.csv", header=FALSE)
+dim(h_summary)
+head(h_summary)
+my.col <- c("chr", "start", "end", "strand")
+my.col2 <- -250:250
+final.colnames <- c(my.col, my.col2)
+colnames(h_summary) <- final.colnames
+h_values_table <- h_summary[,5:505]
+head(h_summary)
+head(h_values_table)
+h_mean_vec <- apply(h_values_table, 2, mean)
+h_median_vec <- apply(h_values_table, 2, median)
+h_mean_matrix <- cbind(-250:250, h_mean_vec, h_median_vec)
+colnames(h_mean_matrix) <- c("Position", "Mean_h", "Median_h")
+h_mean_df <- as.data.frame(h_mean_matrix)
+
+p <- ggplot(h_mean_df, aes(Position,Mean_h))
+p + geom_line(color="green")
+ggsave(file="TSR_500bp_h_mean_plot_POOL.png")
+
+p <- ggplot(h_mean_df, aes(Position,Mean_h))
+p + geom_point(color="green")
+ggsave(file="TSR_500bp_h_mean_dotplot_POOL.png")
+#print(file="TSR_500bp_h_mean_dotplot_NUZHDIN.png")
+
+write.table(h_mean_df, file="Pop_h_values.csv", sep="\t", quote=FALSE, col.names=TRUE, row.names=TRUE)
+```
+
+##dpgp3 data
+```{r}
+library(ggplot2)
+h_summary <- read.csv(file="all_h_dpgp3_sequences.csv", header=FALSE)
+dim(h_summary)
+head(h_summary)
+my.col <- c("chr", "start", "end", "strand")
+my.col2 <- -250:250
+final.colnames <- c(my.col, my.col2)
+colnames(h_summary) <- final.colnames
+h_values_table <- h_summary[,5:505]
+head(h_summary)
+head(h_values_table)
+h_mean_vec <- apply(h_values_table, 2, mean)
+h_median_vec <- apply(h_values_table, 2, median)
+h_mean_matrix <- cbind(-250:250, h_mean_vec, h_median_vec)
+colnames(h_mean_matrix) <- c("Position", "Mean_h", "Median_h")
+h_mean_df <- as.data.frame(h_mean_matrix)
+
+p <- ggplot(h_mean_df, aes(Position,Mean_h))
+p + geom_line(color="purple")
+ggsave(file="TSR_500bp_h_mean_plot_dpgp3.png")
+
+p <- ggplot(h_mean_df, aes(Position,Mean_h))
+p + geom_point(color="purple")
+ggsave(file="TSR_500bp_h_mean_dotplot_dpgp3.png")
+#print(file="TSR_500bp_h_mean_dotplot_dpgp3.png")
+
+write.table(h_mean_df, file="Pop_h_values.csv", sep="\t", quote=FALSE, col.names=TRUE, row.names=TRUE)
+```
+
+
+
+
